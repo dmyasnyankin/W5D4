@@ -1,0 +1,5 @@
+//myEach
+
+//myMap
+
+//myReduce

@@ -42,8 +42,26 @@ console.log([1, 0, -1, 3, 2, 4, -3, 0].twoSum ())
 //   }
 // }
 // return pairs
+
 // Array method transpose
 
+Array.prototype.transpose = function() {
+
+  const cols = Array.from(
+    { length: this[0].length },
+    () => Array.from({ length: this.length })
+  );
+
+  for (let i = 0; i < this.length; i++) {
+    for (let j = 0; j < this[i].length; j++) {
+      cols[j][i] = this[i][j];
+    }
+  }
+
+  return cols;
+};
+
+console.log([[1, 2, 3], [4, 5, 6], [7, 8, 9]].transpose());
 
 // let dog = 'Rex'
 //
